@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,34 @@
     <script src="script.js" defer></script>
     <title>Etchy Sketchy</title>
 </head>
+
 <body>
     <h1>Etchy Sketchy v1.0</h1>
+    <main>
+        <div class="controlsLeft">
+            <p>Drag the slider to change the grid size.</p>
+
+            <div class="slidecontainer" style="display: block;">
+                <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
+                <p>Selected Value: <span id="demo"></span></p>
+                <button id="sizeSelection">Clear Canvas and Resize</button>
+            </div>
+        </div>
+
+        <div class="playArea">
+
+        </div>
+
+        <div class="controlsRight">
+            <p>Drag the slider to change the grid size.</p>
+
+            <div class="slidecontainer" style="display: block;">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <p>Selected Value: <span id="demo"></span></p>
+            </div>
+        </div>
+
+    </main>
 </body>
+
 </html>
