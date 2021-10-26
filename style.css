@@ -18,8 +18,7 @@ main{
 }
 
 .container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     height: 720px;
     width: 720px;
     border: 2px solid red;
@@ -32,6 +31,10 @@ main{
 
 .drawn{
     background: black;
+}
+
+.drawnGrey{
+    background: grey;
 }
 
 button{
@@ -57,4 +60,8 @@ button:active{
     color: black;
     background-color: white;
     border-style:groove
+}
+
+#drawModeForm{
+    text-align: start;
 }

@@ -28,11 +28,16 @@
         </div>
 
         <div class="controlsRight">
-            <p>Drag the slider to change the grid size.</p>
+            <p>Draw mode:</p>
 
-            <div class="slidecontainer" style="display: block;">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                <p>Selected Value: <span id="demo"></span></p>
+            <form id="drawModeForm"> 
+                <input type="radio" id="black" name="drawMode" value="black">
+                <label for="black">Black</label><br>
+                <input type="radio" id="greyScale" name="drawMode" value="greyScale">
+                <label for="greyScale">Grey Scale</label><br>
+                <input type="radio" id="rainbow" name="drawMode" value="rainbow">
+                <label for="rainbow">Rainbow</label>
+              </form>
             </div>
         </div>
 
