@@ -29,14 +29,6 @@ main{
     border: 1px dashed grey;
 }
 
-.drawn{
-    background: black;
-}
-
-.drawnGrey{
-    background: grey;
-}
-
 button{
     padding: 16px;
     font-weight: bold;
