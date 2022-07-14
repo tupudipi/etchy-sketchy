@@ -32,13 +32,18 @@ function selectDrawMode() {
 function draw(e) {
   switch (drawMode) {
     case "black":
-      e.target.classList.add("drawn");
+      e.target.style.backgroundColor = "black";
       break;
     case "greyScale":
-        e.target.classList.add("drawnGrey");
+      //gradually change the color of the div to black using rgba transparency
+      let currentColor = e.target.style.backgroundColor;
+      let currentColorArray = currentColor.split(",");
+      let currentColorA = currentColorArray[3].slice(0, -1);
+      let newColorA = +currentColorA + 0.1;
+      e.target.style.backgroundColor = `rgba(0,0,0,${newColorA})`;
       break;
     case "rainbow":
-      e.target.classList.add("drawn");
+      e.target.style.backgroundColor =`hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`;
       break;
   }
 }
@@ -50,6 +55,7 @@ let divGrid = (gridSize) => {
     for (let j = 0; j < gridSize; j++) {
       let smallDiv = document.createElement("div");
       smallDiv.className = "gridDot";
+      smallDiv.style.backgroundColor = "rgba(0, 0, 0, 0)";
       smallDiv.addEventListener("mouseover", draw);
       container.appendChild(smallDiv);
     }
